@@ -62,3 +62,5 @@ For C/C++ intellisense, consider creating a `c_cpp_properties.json` file inside 
 }
 ```
 Click the run C/C++ file button on the top right of the tab section to run the project
+
+Access the website at `localhost:2452`
