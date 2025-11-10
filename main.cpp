@@ -1,8 +1,7 @@
 #include <winsock2.h>
 #include <iostream>
-#include <thread>
-#include <httpbuilder.hpp>
-#include <utils.hpp>
+#include <httpreader.hpp>
+#include <handlerequest.hpp>
 
 // socket's port
 #define PORT 2452
@@ -84,33 +83,23 @@ int main()
         }
         buffer[bytes_read] = '\0';
 
-        // We don't care what kind of request it is for now
-        printf("Received request:\n%s\n", buffer);
+        // Parse the http request
+        HttpRequest request = parse_http_request(buffer);
+        std::cout << "Method: " << request.method << "\n";
+        std::cout << "Path: " << request.path << "\n";
+        std::cout << "Version: " << request.version << "\n";
 
-        // Read the template content
-        char* content = nullptr;
-        long size = 0;
-        char template_path[] = "./resources/templates/index.html";
-        readfile(&content, &size, template_path);
-        if (content == nullptr) {
-            // TODO: Handle sending 500 Internal Server Error
-            std::cerr << "Could not read the html template!\n";
-            closesocket(client_socket);
-            continue;
+        std::cout << "Headers:\n";
+        for (const auto& [key, value] : request.headers) {
+            std::cout << key << ": " << value << "\n";
         }
 
-        // Make the header for the http response
-        char header[512];
-        header_builder(header, size);
+        std::cout << "Body:\n" << request.body << "\n";
 
-        printf("content:\n%s\n", content);
-        send(client_socket, header, strlen(header), 0);
-        send(client_socket, content, size, 0);
-        std::cout << "Sent template to client!\n";
+        handle_request(client_socket, request);
 
         // Clean up
         closesocket(client_socket);
-        delete[] content;
     }
     // Clean up
     clean_up();

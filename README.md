@@ -17,6 +17,8 @@ Create a `tasks.json` file inside the `.vscode` folder in the working directory 
                 "${cwd}\\main.cpp",
                 "${cwd}\\src\\httpbuilder.cpp",
                 "${cwd}\\src\\utils.cpp",
+                "${cwd}\\src\\httpreader.cpp",
+                "${cwd}\\src\\handlerequest.cpp",
                 "-o",
                 "${cwd}\\build\\output.exe",
                 "-lws2_32",
