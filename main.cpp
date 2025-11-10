@@ -85,16 +85,7 @@ int main()
 
         // Parse the http request
         HttpRequest request = parse_http_request(buffer);
-        std::cout << "Method: " << request.method << "\n";
-        std::cout << "Path: " << request.path << "\n";
-        std::cout << "Version: " << request.version << "\n";
-
-        std::cout << "Headers:\n";
-        for (const auto& [key, value] : request.headers) {
-            std::cout << key << ": " << value << "\n";
-        }
-
-        std::cout << "Body:\n" << request.body << "\n";
+        request.print();
 
         handle_request(client_socket, request);
 
