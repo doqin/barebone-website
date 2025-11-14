@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Khang's Introduction
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --highlight-color: #52d6cb;
+        }
+
+        div {
+            display: block;
+        }
+
+        body {
+            font-weight: 300;
+            font: 14px/20px "Muli", "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            padding-top: 1px;
+            padding-right: 0.3em;
+            padding-bottom: 1px;
+            padding-left: 0.3em;
+        }
+
+        h2 {
+            font-size: 26px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 26px;
+            line-height: 34px;
+            margin-bottom: 8px;
+        }
+
+        h4 {
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 4px;
+        }
+
+        p {
+            color: #333;
+            margin: 0 0 20px 0;
+        }
+
+        .navigation p {
+            color: #dadada;
+        }
+
+        .container {
+            position: relative;
+            width: 960px;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .section-name {
+            color: var(--highlight-color);
+            float: left;
+            width: 200px;
+        }
+
+        .section-content {
+            float: left;
+            width: calc(100% - 200px);
+        }
+
+        .navigation {
+            background: black;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 275px;
+            left: 0;
+            padding-top: 3.5em;
+            padding-bottom: 3.5em;
+            color: white;
+            font-size: 18px;
+        }
+
+        .navigation p {
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 1.3em;
+            margin-bottom: 0.5em;
+        }
+
+        .navigation a {
+            color: white;
+        }
+
+        .navigation .list a {
+            display: block;
+            padding-left: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 12px;
+        }
+
+        .navigation .list a:hover {
+            background: rgb(36, 36, 36);
+        }
+
+        .list {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        .list hr {
+            border-color: #333;
+            border-style: dashed;
+            margin-top: 1.7em;
+            margin-bottom: 1.7em;
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+
+        .section hr {
+            margin-top: 3em;
+            margin-bottom: 3em;
+            border-color: #dadada;
+            border-width: 1px 0 0;
+            border-style: dashed;
+        }
+
+        .date {
+            font-size: 16px;
+            margin-right: 0.5em;
+            padding: 2px 0.5em;
+            border-radius: 3px;
+            vertical-align: top;
+            background-color: #333;
+            color: #ddd;
+        }
+
+        h3 .duration span {
+            color: #a1a1a1;
+        }
+
+        .header {
+            padding-top: 3em;
+        }
+
+        .email {
+            color: var(--highlight-color) !important;
+        }
+
+        .pin {
+            color: white;
+        }
+
+        .pin:hover {
+            background-color: #333;
+            border-radius: 3px;
+        }
+
+        .tag {
+            color: #333;
+            padding: 2px;
+        }
+
+        .tag:hover {
+            color: white;
+            background-color: #333;
+            border-radius: 3px;
+        }
+
+        /* Disables the navigation sidebar */
+        @media (max-width: 1700px) {
+            .navigation {
+                display: none;
+            }
+        }
+
+        /* Collapses the float box */
+        @media (max-width: 1000px) {
+            .container {
+                width: 600px;
+            }
+
+            .section-name,
+            .section-content {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/jpeg" href="/images/doqin.jpeg">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="section">
+            <div class="header">
+                <h1 title="Nguyen Tuan Khang">N. Tuan Khang</h1>
+                <span>Software Engineering Undergraduate</span>
+            </div>
+        </div>
+        <!-- Spare Time -->
+        <div class="section">
+            <hr>
+            <div class="section-name">
+                <h2 id="sparetime">Spare Time <a href="#sparetime" class="pin">@</a></h2>
+            </div>
+            <div class="section-content">
+                <h3>
+                    <span class="date">
+                        <span>spare time</span>
+                    </span>
+                    Personal projects
+                </h3>
+                <!-- Bao -->
+                <h4>Bao</h4>
+                <p>
+                    Bao is a programming language with Vietnamese syntax meant to be educational to code beginners. The
+                    language is <i>planned</i> to be extensible with C/C++ libraries. The language is inspired by many
+                    high-level languages like <b>Pascal</b> and <b>Go</b> designed to be simple and safe but fast enough
+                    to cater to many types of projects.
+                </p>
+                <ul>
+                    <li>
+                        Software design &mdash; System programming &mdash; Architecture
+                    </li>
+                    <li>
+                        <span class="tag">C++</span> &ndash; <span class="tag">LLVM</span> &ndash; <span
+                            class="tag">LLD</span>
+                    </li>
+                </ul>
+                <p>
+                    Git source: <a href="https://github.com/bao-langu/bao">github.com/bao-langu/bao</a>
+                </p>
+                <hr>
+                <!-- Chitchat -->
+                <h4>Chitchat</h4>
+                <p>
+                    Chitchat is a native Windows LAN messaging app. Designed to be light, fast, nonobstructive to work.
+                </p>
+                <ul>
+                    <li>
+                        Software design &mdash; Architecture
+                    </li>
+                    <li class="taglist">
+                        <span class="tag">C#</span> &ndash; <span class="tag">WinForms</span> &ndash; <span
+                            class="tag">Win32</span> &ndash; <span class="tag">Visual
+                            Studio</span>
+                    </li>
+                </ul>
+                <p>
+                    Git source: <a href="https://github.com/doqin/chatchat">github.com/doqin/chitchat</a>
+                </p>
+                <hr>
+                <!-- Macaccord -->
+                <h4>Macaccord</h4>
+                <p>
+                    Macaccord is a native SwiftUI client for Discord. Created for the purpose of providing a clean,
+                    fast, low memory footprint alternative to the Electron client of Discord. Your RAM will thank you!
+                </p>
+                <ul>
+                    <li>
+                        Software design &mdash; Reverse Engineering
+                    </li>
+                    <li class="taglist">
+                        <span class="tag">Swift</span> &ndash; <span class="tag">SwiftUI</span> &ndash; <span
+                            class="tag">Cocoa</span> &ndash;
+                        <span class="tag">XCode</span>
+                    </li>
+                </ul>
+                <p>
+                    Git source: <a href="https://github.com/doqin/macaccord">github.com/doqin/macaccord</a>
+                </p>
+                <hr>
+                <!-- UITNotify -->
+                <h4>UITNotify</h4>
+                <p>
+                    UITNotify is a web scraping Android app that scrapes the UIT annoucement site for new articles and
+                    sends a notification on your phone. This project is meant to streamline UIT University student's
+                    work life
+                </p>
+                <ul>
+                    <li>
+                        Software design &mdash; Web Scraping
+                    </li>
+                    <li class="taglist">
+                        <span class="tag">Kotlin</span> &ndash; <span class="tag">Android</span>
+                    </li>
+                </ul>
+                <p>
+                    Git source: <a href="https://github.com/doqin/UITNotify">github.com/doqin/UITNotify</a>
+                </p>
+            </div>
+        </div>
+        <!-- Skill -->
+        <div class="section">
+            <hr>
+            <div class="section-name">
+                <h2 id="skill">Skill <a href="#skill" class="pin">@</a></h2>
+            </div>
+            <div class="section-content">
+                <h3>
+                    Languages
+                </h3>
+                <p>
+                    Intermediate - <a class="tag">C/C++</a>, <a class="tag">Go</a>
+                </p>
+                <p>
+                    Familiar - <a class="tag">Python</a>, <a class="tag">Typescript/Javascript</a>, <a
+                        class="tag">Java</a>, <a class="tag">Kotlin</a>
+                </p>
+                <p>
+                    Beginner - <a class="tag">Haskell</a>
+                </p>
+                <h3>
+                    Other
+                </h3>
+                <p>
+                    Frameworks - <a class="tag">WinForms</a>, <a class="tag">SwiftUI</a>
+                </p>
+                <p>
+                    Libraries - <a class="tag">SDL/SDL2</a>, <a class="tag">OpenGL</a>, <a class="tag">WebGL</a>
+                </p>
+                <p>
+                    Tools - <a class="tag">GIT</a>, <a class="tag">Visual Studio</a>, <a class="tag">XCode</a>, <a class="tag">Vim</a>
+                </p>
+            </div>
+        </div>
+        <!-- Education -->
+        <div class="section">
+            <hr>
+            <div class="section-name">
+                <h2 id="education">Education <a href="#education" class="pin">@</a></h2>
+            </div>
+            <div class="section-content">
+                <h3>
+                    <span class="date">
+                        <span>
+                            2024&nbsp;
+                            <span class="duration">
+                                <span>now</span>
+                            </span>
+                        </span>
+                    </span>
+                    Bachelor's degree
+                </h3>
+                <p>Major: Software Engineering at Vietnam National University, Ho Chi Minh City &ndash; University of
+                    Information Technology (VNUHCM &ndash; UIT)</p>
+                <p>
+                    UIT website: <a href="https://www.uit.edu.vn/">www.uit.edu.vn</a>
+                </p>
+                <hr>
+                <h3>
+                    Languages
+                </h3>
+                <ul>
+                    <li>
+                        English
+                    </li>
+                    <li>
+                        Vietnamese
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <hr>
+            Last updated @ 14 November 2025
+        </div>
+        <!-- Sidebar -->
+        <div class="navigation">
+            <p title="Nguyen Tuan Khang">N. Tuan Khang</p>
+            <div class="list">
+                <a href="#sparetime">Spare Time</a>
+                <a href="#skill">Skill</a>
+                <a href="#education">Education</a>
+                <hr>
+                <a class="email" href="mailto:personal.azalea@gmail.com">personal.azalea@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
